@@ -1,0 +1,22 @@
+<div ng-controller="CheckoutController">
+	<h4>Shopping cart</h4>
+	<ul class="list-group" ng-repeat="item in cart">
+		<li class="list-group-item"><small>{{ item.name }}</small>
+
+			<button  class="btn btn-active btn-xs pull-right" ng-click="deleteItem(item)">
+				<span class="glyphicon glyphicon-remove"></span>
+			</button>
+			
+			<div class="pull-right" style="margin-right: 30px">
+				<small>{{ item.price | currency }}</small>
+			</div>
+
+		</li>
+	</ul>
+	<div ng-show="cart.length">
+		<span>Total price: {{ price | currency }}<span>
+			<a href="#/checkout"  class="btn btn-primary pull-right">Pay: {{ price | currency }}
+				<span class="glyphicon glyphicon-shopping-cart"></span>
+			</a>
+		</div>
+	</div>

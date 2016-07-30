@@ -1,0 +1,40 @@
+<div ng-controller="MainController" class="col-md-9 col-sm-6">
+
+	<div ng-repeat="album in uname.albums">
+		<div class="col-md-4" style="display: inline-block">
+			<div class="thumbnail">
+				<a class="thumbnail"><img ng-src="{{album.images[1].url}}"></a>
+				<h5>{{album.name}}</h5>
+				<div class="text-center">
+					<button class="btn btn-primary" ng-click="addToCart(album)">Add to cart
+						<span class="badge">{{ album.price | currency }}</span>
+					</button>
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+</div>
+
+<div class="col-md-3 col-sm-6" ng-controller="CartController">
+
+	<h4>Shopping cart</h4>
+	
+	<ul class="list-group" ng-repeat="item in cart">
+		<li class="list-group-item"><small>{{ item.name }}</small>
+			
+			<button class="btn btn-active btn-xs pull-right" ng-click="deleteItem(item)">
+				<span class="glyphicon glyphicon-remove"></span>
+			</button>
+			
+
+		</li>
+	</ul>
+
+	<div ng-show="cart.length">
+		<p>Price: {{ price | currency }}<p>
+			<a href="#/checkout"  class="btn btn-primary center-block">Checkout: 
+				<span class="glyphicon glyphicon-shopping-cart"></span>
+			</a>
+	</div>
+</div>
