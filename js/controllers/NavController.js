@@ -1,6 +1,6 @@
 (function(){
 
-	webshopApp.controller('NavController',  function($scope,$location){
+	angular.module('webshopApp').controller('NavController',  function($scope,$location){
 
 		$scope.isActive = function (viewLocation) { 
 			return viewLocation === $location.path();

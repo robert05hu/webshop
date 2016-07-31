@@ -1,7 +1,7 @@
 (function () {
 	
 
-	webshopApp.controller('LoginController', ['$scope','$http', function($scope,$http){
+	angular.module('webshopApp').controller('LoginController', ['$scope','$http', function($scope,$http){
 		
 		 $scope.username = '';
 		 $scope.password = '';

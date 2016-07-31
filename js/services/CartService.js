@@ -1,6 +1,6 @@
 (function () {
 	
-	webshopApp.factory('CartService', function(){
+	angular.module('webshopApp').factory('CartService', function(){
 		
 		var mainCart = [];
 
@@ -16,7 +16,7 @@
 				if(putIn){
 					mainCart.push(album);
 				}
-				console.log("success" + mainCart);
+				//console.log("success" + mainCart);
 			},
 			delete: function (album){
 				for (var i = mainCart.length - 1; i >= 0; i--) {
@@ -24,7 +24,7 @@
 						mainCart.splice(i,1);
 					}
 				}
-				console.log("deleted: " + album);
+				//console.log("deleted: " + album);
 			},
 			get: function (){
 				return mainCart;

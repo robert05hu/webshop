@@ -1,6 +1,6 @@
 (function(){
 
-	webshopApp.controller('MainController', function($scope,$http,$rootScope,AlbumService,CartService){
+	angular.module('webshopApp').controller('MainController', function($scope,$http,$rootScope,AlbumService,CartService){
 
 		var incPrice = 4;
 

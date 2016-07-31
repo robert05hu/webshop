@@ -1,6 +1,6 @@
 (function() {
 	
-	webshopApp.directive('navigation',  function(){
+	angular.module('webshopApp').directive('navigation',  function(){
 		// Runs during compile
 		return {
 			// name: '',

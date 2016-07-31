@@ -1,6 +1,6 @@
 (function(){
 
-	webshopApp.controller('CartController',function($scope,CartService){
+	angular.module('webshopApp').controller('CartController',function($scope,CartService){
 		
 		$scope.cart = CartService.get();
 		$scope.price = 0;

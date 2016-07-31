@@ -1,11 +1,7 @@
 
-	
-	/**
-	* webshopApp Modul;
-	*
-	* Description
-	*/
-	var webshopApp = angular.module('webshopApp', ['ngRoute']).config(function ($routeProvider) {
+(function(){
+
+  angular.module('webshopApp', ['ngRoute']).config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: '/html/main.html'
@@ -22,4 +18,6 @@
         redirectTo: '/'
       });
 
-  });;
+  });
+
+}());
