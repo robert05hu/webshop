@@ -4,7 +4,7 @@
   angular.module('webshopApp', ['ngRoute']).config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/html/main.html'
+        templateUrl: 'html/main.html'
       })
       .when('/checkout', {
         templateUrl: 'html/checkout.html',
